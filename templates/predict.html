@@ -1,0 +1,98 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Predict</title>
+    <meta charset="utf-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1">
+    <style>
+         body{
+            background-image:url("{%static 'house.jpg'%}");
+             background-repeat: no-repeat;
+           background-attachment: fixed;
+            background-size:cover;
+        }
+      /* CSS for centering the form and setting width */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        form {
+            width: 400px; /* Adjust the width of the form */
+            padding: 20px;
+            border-radius: 10px;
+            background-color: rgba(249, 249, 249, 0.8); /* Transparent background color */
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc; /* Add border to input fields */
+            border-radius: 5px; /* Add border radius to input fields */
+            box-sizing: border-box; /* Include padding and border in width */
+        }
+        input[name="value1"] {
+            background-color: #f0e68c; /* Lightgoldenrodyellow */
+        }
+        input[name="value2"] {
+            background-color: #ff6347; /* Tomato */
+        }
+        input[name="value3"] {
+            background-color: #87cefa; /* LightSkyBlue */
+        }
+        input[name="value4"] {
+            background-color: #98fb98; /* PaleGreen */
+        }
+        input[name="value5"] {
+            background-color: #dda0dd; /* Plum */
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+   <div class="container">
+        <form action="result" >
+            <h3>Please enter the value:</h3>
+            <label for="n1">Avg.Area Income</label>
+            <input type="text" id="n1" name="n1" required>
+
+            <label for="n2">House Age</label>
+            <input type="text" id="n2" name="n2" required>
+
+            <label for="n3">Number of Rooms</label>
+            <input type="text" id="n3" name="n3" required>
+
+            <label for="n4">Number of Bedrooms</label>
+            <input type="text" id="n4" name="n4" required>
+
+            <label for="n5">Population</label>
+            <input type="text" id="n5" name="n5" required>
+
+            <input type="submit" value="PREDICT">
+            <div class="row">
+           <h3>{{result2}}</h3>
+            </div>
+        </form>
+
+    </div>
+</body>
+</html>
