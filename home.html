@@ -1,0 +1,57 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <style>
+        body{
+            background-image:url("{%static 'house.jpg'%}");
+             background-repeat: no-repeat;
+           background-attachment: fixed;
+            background-size:cover;
+        }
+        h2{
+
+            margin-top:150;
+            font-size:40px;
+            margin: 20px;
+
+
+        }
+        h1{
+            font-size:50px;
+            margin: 20px;
+
+        }
+        input[type=submit]{
+           background-color: #000; /* Black background color */
+            color: #fff; /* White text color */
+            border: 1px solid #000; /* Black border */
+            border-radius: 5px; /* Border radius */
+            padding: 10px 20px; /* Padding */
+            text-decoration: none; /* Remove underline */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* 3D effect */
+            transition: box-shadow 0.3s ease; /* Smooth transition */
+
+        }
+        input[type=submit]:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Darker 3D effect on hover */
+        }
+        input[type=submit]:active {
+            transform: translateY(2px); /* Move the button down by 2 pixels when clicked */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Adjust 3D effect when clicked */
+        }
+
+
+
+    </style>
+</head>
+<body style="text-align:center">
+    <h2>Welcome to</h2>
+    <h1>House Price Prediction</h1>
+    <form action="predict">
+        <input type="submit" value="START">
+    </form>
+</body>
+</html>
